@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_page.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+    <div class="tab">
+        <form>
+        <button class="tablinks" formaction="/backtoproduct">All Products</button>
+        <button class="tablinks" formaction="/upload_image">Search By Image</button>
+        <button class="tablinks" formaction="/cart">Cart</button>
+        <button class="tablinks last-btn"  formaction="/">Logout</button>
+        </form>
+    </div>
+<body>
+    <div class="login-box">
+        <div class="user-icon"></div>
+        <ul class="login-title">Shopping Cart</ul>
+        <form method="POST">
+            <div>
+                <p>Order is successfully placed.</p>
+                <p>Will be delivered to <b>{{ address }}</b></p>
+                <p>Contact Number: <b>{{ phone }}</b></p>
+                <h3>Happy Shopping!</h3>
+            </div>
+        </form>
+        <p class = "error-msg"> {{error_msg}}</p>
+    </div>
+</body>
+
+</html>

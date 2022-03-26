@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Shopping Cart - Register User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/customer_home_page.css') }}">
+</head>
+
+<body>
+    <div class="tab">
+        <form>
+        <button class="tablinks" formaction="/backtoproduct">All Products</button>
+        <button class="tablinks" formaction="/upload_image">Search By Image</button>
+        <button class="tablinks" formaction="/cart">Cart</button>
+        <button class="tablinks last-btn"  formaction="/">Logout</button>
+        </form>
+    </div>
+    <h2>Products Available:</h2><br>
+    <div class="flex-container">
+        <div class="flip-card flex-child">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src={{ url_for('static', filename='laptop_1.jpg') }} alt="Laptop" style="width:250px;height:250px;">
+                </div>
+                <div class="flip-card-back">
+                    <a href={{ url_for('product_name',product='laptop') }}>
+                        <h1>Laptops</h1>
+                    </a>
+                    <h3>Brands Available:</h3>
+                    <ul class="unordered-list">
+                        <li>Apple</li>
+                        <li>Microsoft</li>
+                        <li>Dell</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card flex-child">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src={{ url_for('static', filename='smartwatch.jpg') }} alt="Smart Watch" style="width:250px;height:250px;">
+                </div>
+                <div class="flip-card-back">
+                    <a href={{ url_for('product_name',product='smartwatch') }}>
+                        <h1>Smart Watches</h1>
+                    </a>
+                    <h3>Brands Available:</h3>
+                    <ul class="unordered-list">
+                        <li>Apple</li>
+                        <li>Samsung</li>
+                        <li>Fitbit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card flex-child">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src={{ url_for('static', filename='phone.jpg') }} alt="Smart Phone" style="width:250px;height:250px;">
+                </div>
+                <div class="flip-card-back">
+                    <a href={{ url_for('product_name',product='phone') }}>
+                        <h1>Smart Phones</h1>
+                    </a>
+                    <h3>Brands Available:</h3>
+                    <ul class="unordered-list">
+                        <li>Apple</li>
+                        <li>Samsung</li>
+                        <li>One Plus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

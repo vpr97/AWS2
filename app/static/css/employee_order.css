@@ -1,0 +1,277 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+body{
+ margin: 0;
+ padding: 0;
+ background: linear-gradient( to bottom left, white 50%, rgba(255, 208, 0, 0.671) 50%);
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: rgba(255, 208, 0, 0.671);
+
+}
+
+.tab button.active {
+    background-color: rgba(255, 208, 0, 0.671);
+
+}
+
+/*.last-btn{*/
+/*	margin-left: 665px;*/
+/*}*/
+
+.container{
+	width: 70%;
+	height: auto;
+	background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px #1687d933;
+
+    position: relative;
+    margin: auto;
+    padding-right: 300px;
+}
+
+.Header{
+	margin: auto;
+	width: 90%;
+	height: 15%;
+	display: flex;
+	justify-content: space-between;
+
+	align-items: center;
+}
+
+.Heading{
+    padding-top: 10px;
+	line-height: 10px;
+	font-size: 32px;
+
+	font-weight: 800;
+	color: #202020;
+
+}
+
+.Action{
+	font-size: 14px;
+
+	font-weight: 600;
+	color: #E44C4C;
+	cursor: pointer;
+	border-bottom: 1px solid #E44C4C;
+}
+
+.Action:hover{
+    opacity: 0.75;
+
+}
+
+.Cart-Items{
+	margin: auto;
+	width: 90%;
+	height: 30%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.about{
+	height: 50%;
+	width: 20%;
+
+}
+
+.order-num{
+	margin-left: 100px;
+}
+
+.title{
+	font-size: 25px;
+
+	font-weight: 700;
+	color: #2F3841;
+}
+
+.order-btn{
+	width: 100%;
+	height: 40px;
+	border: none;
+	background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 16px;
+
+	font-weight: 600;
+	color: #202020;
+	margin-left: 150px;
+	margin-bottom: 20px;
+}
+
+.subtitle{
+	line-height: 10px;
+	font-size: 15px;
+
+	font-weight: 600;
+	color: #909090;
+}
+
+.counter{
+	width: 15%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.btn{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+
+	font-weight: 900;
+	color: #202020;
+	cursor: pointer;
+}
+
+.btn:hover{
+    opacity: 0.75;
+}
+
+.count{
+	font-size: 20px;
+
+	font-weight: 600;
+	color: #202020;
+	width: 25%
+}
+
+.prices{
+	height: 100%;
+	text-align: right;
+
+}
+.amount{
+	padding-top: 70px;
+	font-size: 26px;
+
+	font-weight: 800;
+	color: #202020;
+}
+.save{
+	padding-top: 5px;
+	font-size: 14px;
+
+	font-weight: 600;
+	color: #1687d9;
+	cursor: pointer;
+}
+.remove{
+	padding-top: 5px;
+	font-size: 14px;
+
+	font-weight: 600;
+	color: #E44C4C;
+	cursor: pointer;
+}
+.remove:hover{
+    opacity: 0.75;
+
+}
+
+.pad{
+	margin-top: 5px;
+
+}
+
+hr{
+	width: 66%;
+	float: right;
+	margin-right: 5%;
+}
+.checkout{
+	float: right;
+	margin-right: 5%;
+	width: 28%;
+}
+
+
+.total{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.Subtotal{
+	font-size: 22px;
+
+	font-weight: 700;
+	color: #202020;
+}
+.items{
+	font-size: 16px;
+
+	font-weight: 500;
+	color: #909090;
+	line-height: 10px;
+}
+.total-amount{
+	font-size: 36px;
+
+	font-weight: 900;
+	color: #202020;
+
+}
+.checkoutbutton{
+	margin-top: 10px;
+	width: 100%;
+	height: 40px;
+	border: none;
+	background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 16px;
+
+	font-weight: 600;
+	color: #202020;
+}
+
+.checkoutbutton:hover{
+    opacity: 0.75;
+
+}
+
+div {
+    width: 20%;
+    margin: auto;
+
+}
+input, button {
+    display: inline-block;
+    padding: 10px;
+
+}

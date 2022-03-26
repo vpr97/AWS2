@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+body{
+ margin: 0;
+ padding: 0;
+ background: linear-gradient( to bottom left, white 50%, rgba(255, 208, 0, 0.671) 50%);
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family:lato;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: rgba(255, 208, 0, 0.671);
+
+}
+
+.tab button.active {
+    background-color: rgba(255, 208, 0, 0.671);
+
+}
+
+.last-btn{
+	margin-left: 360px;
+
+}
+
+
+.graph_plot{
+    padding-left: 50px;
+    padding-top: 50px;
+
+}

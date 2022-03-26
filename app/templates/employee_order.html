@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart UI</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/employee_order.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+   <form method="POST">
+   <div class="container">
+   	<!--<div class="tab">-->
+    <!--    <form>-->
+    <!--    <button class="tablinks" formaction="/employee_home">All Products</button>-->
+    <!--    <button class="tablinks last-btn"  formaction="/">Logout</button>-->
+    <!--    </form>-->
+    <!-- </div>-->
+   	   <div class="Header">
+   	   	<h3 class="Heading">ORDERS</h3>
+   	   </div>
+   	   <div class="Cart-Items">
+   	   	  <div class="about">
+   	   	  	<h1 class="title">SmartWatch_1</h1>
+   	   	  	<h3 class="subtitle">Category:Smartwatch</h3>
+   	   	  </div>
+   	   	  <div class="counter">
+			  <input class = "order-num" value="0" name="SmartWatch_1" >
+   	   	  </div>
+   	   </div>
+   	   
+   	   <div class="Cart-Items">
+   	   	  <div class="about">
+   	   	  	<h1 class="title">Laptop_3</h1>
+   	   	  	<h3 class="subtitle">Category:Laptop</h3>
+   	   	  </div>
+   	   	  <div class="counter">
+			  <input class = "order-num" value="0" name="Laptop_3" >
+   	   	  </div>
+   	   </div>
+   	   
+   	   <div class="Cart-Items">
+   	   	  <div class="about">
+   	   	  	<h1 class="title">Mobile_1</h1>
+   	   	  	<h3 class="subtitle">Category:Mobile</h3>
+   	   	  </div>
+   	   	  <div class="counter">
+			  <input class = "order-num" value="0" name="Mobile_1" >
+   	   	  </div>
+   	   </div>
+   	   
+   	   <div class="Cart-Items">
+   	   	  <div class="about">
+   	   	  	<h1 class="title">Laptop_2</h1>
+   	   	  	<h3 class="subtitle">Category:Laptop</h3>
+   	   	  </div>
+   	   	  <div class="counter">
+			  <input class = "order-num" value="0" name="Laptop_2" >
+   	   	  </div>
+   	   </div>
+   	   
+   	   <div class="Cart-Items">
+   	   	  <div class="about">
+   	   	  	<h1 class="title">Laptop_1</h1>
+   	   	  	<h3 class="subtitle">Category:Laptop</h3>
+   	   	  </div>
+   	   	  <div class="counter">
+			  <input class = "order-num" value="0" name="Laptop_1" >
+   	   	  </div>
+   	   </div>
+   	   <br>
+   	   
+   	   <button type = "submit" class="order-btn" formaction="/employee_place_order">Place Order</button>
+   	   <p>{{ error_msg }}</p>
+   </div>
+</form>
+
+</body>
+</html>

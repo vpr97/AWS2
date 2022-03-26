@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/checkout.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+<body>
+    <div class="tab">
+        <form>
+        <button class="tablinks" formaction="/backtoproduct">All Products</button>
+        <button class="tablinks" formaction="/upload_image">Search By Image</button>
+        <button class="tablinks" formaction="/cart">Cart</button>
+        <button class="tablinks last-btn"  formaction="/">Logout</button>
+        </form>
+    </div>
+<div class='container'>
+  <div class='window'>
+    <div class='order-info'>
+      <div class='order-info-content'>
+        <h2>Order Summary</h2>
+        
+        {% for item in final_each_product_list %}
+        <div class='line'></div>
+        <table class='order-table'>
+          <tbody>
+            <tr>
+              <td><img src="{{ url_for('static', filename= item[1]) }}" class='full-width'></img>
+              </td>
+              <td>
+                <br> <span class='thin'>{{ item[2] }}</span>
+                <br>{{ item[3] }}<br> <span class='thin small'> {{ item[4] }}<br><br></span>
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <div class='price'>${{ item[6] }}</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        {% endfor %}
+        
+        
+        <div class='line'></div>
+        <div class='total'>
+          <span style='float:left;'>
+            <div class='thin dense'>VAT 13%</div>
+            TOTAL
+          </span>
+          <span style='float:right; text-align:right;'>
+            <div class='thin dense'>${{ tax }}</div>
+            ${{ total }}
+          </span>
+        </div>
+</div>
+</div>  
+        <div class='credit-info'>
+          <div class='credit-info-content'>
+            <!--<table class='half-input-table'>-->
+            <!--    <div class='dropdown-select'>-->
+            <!--    <ul>-->
+            <!--      <li>Master Card</li>-->
+            <!--      <li>American Express</li>-->
+            <!--      </ul></div>-->
+            <!--    </div>-->
+            <!--   </td></tr>-->
+            <!--</table>-->
+            <!--Card Number-->
+        
+            <!--<input class='input-field'></input>-->
+            <!--Card Holder-->
+            <!--<input class='input-field'></input>-->
+            <!--<table class='half-input-table'>-->
+            <!--  <tr>-->
+            <!--    <td> Expires-->
+            <!--      <input class='input-field'></input>-->
+            <!--    </td>-->
+            <!--    <td>CVV-->
+            <!--      <input class='input-field'></input>-->
+            <!--    </td>-->
+            <!--  </tr>-->
+            <!--</table>-->
+          <form method="POST">
+            Address
+            <input type ="text" name ="address" class='input-field' required>
+            Phone Number
+            <input type ="text" name ="phone" class='input-field' required>
+            <p class = "error-msg"> {{error_msg}}</p>
+            <br>
+        
+          </div>
+            <button type ='submit' class='pay-btn' formaction='/confirm_order'>Place Order</button>
+          </form>
+        </div>
+      </div>
+</div>
+
+</body>
+
+</html>

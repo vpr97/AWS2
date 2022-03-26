@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>Shopping Cart - Register User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register_user_page.css') }}">
+</head>
+<body>
+<div class="register-box">
+    <div class="user-icon"></div>
+    <ul class="register-title">Create Account</ul>
+    <form method="POST">
+        <div>
+        <input class="form-input" type="text" name="name" placeholder="Username">
+        <input class="form-input" type="text" name="email" placeholder="Email">
+        <input class="form-input" type="password" name="password" placeholder="Password">
+        <input class="form-input" type="password" name="re-password" placeholder="Re-Enter Password">
+        <button type = "create" class="form-button" formaction="/signup">Create Account</button>
+        <button type = "reset" class="form-button">Reset</button>
+        </div>
+    </form>
+    <p class = "error-msg">{{msg}}</p>
+</div>
+</body>
+</html>

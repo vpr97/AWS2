@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart UI</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/cart.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+
+<body>
+   <div class="CartContainer">
+    <div class="tab">
+        <form>
+        <button class="tablinks" formaction="/backtoproduct">All Products</button>
+        <button class="tablinks" formaction="/upload_image">Search By Image</button>
+        <button class="tablinks" formaction="/cart">Cart</button>
+        <button class="tablinks last-btn"  formaction="/">Logout</button>
+        </form>
+    </div>
+   	   <div class="Header">
+   	   	<h3 class="Heading">Shopping Cart</h3>
+   	   </div>
+    {% for item in final_each_product_list %}
+   	   <div class="Cart-Items">
+   	   	  <div class="image-box">
+   	   	  	<img class="large-image" src={{ url_for('static', filename= item[1]) }} />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">{{ item[2] }}</h1>
+   	   	  	<h2 class="subtitle">{{ item[3] }}</h2>
+   	   	  	<h3 class = "subtitle">{{ item[4] }}</h3>
+   	   	  </div>
+   	   	  <div class="prices">
+   	   	  	<div class="amount">${{ item[6] }}</div>
+   	   	  	<div class="remove"><a href="{{url_for('remove_each_from_cart', product_name =item[2])}}" >Remove</a></div>
+   	   	  </div>
+   	   </div>
+   	   <br>
+    {% endfor %}
+   	 <hr> 
+   	 <form>
+   	 <div class="checkout">
+   	 <div class="total">
+   	 	<div>
+   	 		<div class="Subtotal">Total:</div>
+   	 		<div class="items">{{ n }} item(s)</div>
+   	 	</div>
+   	 	<div class="total-amount">${{ cost }}</div>
+   	 </div>
+   	 {% if cost==0 %}
+   	 <button class="button disabled" formaction="/checkout" disabled>Checkout</button>
+   	 {% else %}
+   	 <button class="button" formaction="/checkout">Checkout</button>
+   	 {% endif %}
+   	 </div>
+   </div>
+   </form>
+</body>
+</html>

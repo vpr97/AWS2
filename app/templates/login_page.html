@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_page.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+
+<body>
+    <div class="login-box">
+        <div class="user-icon"></div>
+        <ul class="login-title">Shopping Cart</ul>
+        <form method="POST">
+            <input class="form-input" type="text" name="email" placeholder="Email">
+            <input class="form-input" type="password" name="password" placeholder="Password">
+            <select class="form-select" name="user-type" id="user-type">
+            <option value="default">Select User Type</option>
+            <option value="customer">Customer</option>
+            <option value="employee">Employee</option>
+            </select>
+            <button type="submit" class="form-button" formaction="/login">Login</button>
+            <button class="form-button" formaction="/dev/createAccount" type="submit">Signup</button>
+            <div class="login-links">
+                <a href="/gotorecoverpassword" class="form-link">Forgot Password?</a>
+            </div>
+        </form>
+        <p class = "error-msg"> {{error_msg}}</p>
+    </div>
+</body>
+
+</html>

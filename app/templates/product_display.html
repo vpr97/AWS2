@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <title>Product Details</title>
+    <link href="{{ url_for('static', filename='css/product_display.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <form>
+    <div class="tab">
+        <button class="tablinks" formaction="/backtoproduct">All Products</button>
+        <button class="tablinks" formaction="/upload_image">Search By Image</button>
+        <button class="tablinks" formaction="/cart">Cart</button>
+        <button class="tablinks last-btn"  formaction="/">Logout</button>
+    </div>
+    
+    <div class="flex-container">
+        {% for item in final_product_list %}
+        <div class="wrapper">
+            <div class="product-img">
+                {% with img_name = item[1] %} 
+                <img src={{ url_for('static', filename= item[1] ) }} height="210" width="327">
+                {% endwith %}
+            </div>
+            <div class="product-info">
+                <div class="product-text">
+                    <h1>{{ item[2] }}</h1>
+                    <h2>{{ item[4] }}</h2>
+                    <p>{{ item[5] }}</p>
+                </div>
+                <div class="product-price-btn">
+                    <p><span>${{ item[6] }}</span></p>
+                    <button  formaction ="{{url_for('add_to_cart', product_name =item[2],product=item[3] )}}">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </form>
+</body>
+
+</html>
